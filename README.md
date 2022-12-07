@@ -1,4 +1,9 @@
-<img align="right" src="https://github.com/pablof1988/goSorensenApp/raw/master/info/goSorensen.png" width=150> 
+# goSorensenApp
+App to detect equivalence between features lists, based on the Sorensen–Dice index and the joint frequencies of GO term enrichment
+
+<br>
+
+<img align="right" src="https://github.com/pablof1988/goSorensenApp/raw/master/info/goSorensen.png" width=200> 
 
 The goal of this app is to provide a simple calculation tool to implement the equivalence test between lists of features introduced in Flores, P., Salicrú, M., Sánchez-Pla, A. and Ocaña, J.(2022) "*An equivalence test between features lists, based on the Sorensen - Dice index and the joint frequencies of GO term enrichment*", BMC Bioinformatics, 2022 23:207.(See full article in <https://rdcu.be/cOISz>). Actually, this is a condensed and user friendly version of the R package published in Bioconductor "goSorensen". More complex calculations can be performed directly using the functions in this package (See more details in <https://bioconductor.org/packages/release/bioc/html/goSorensen.html>).
 
@@ -30,10 +35,10 @@ $$
 
 where $d_0$ stands for a given equivalence limit or, in other words, a limit of dissimilarity irrelevance. In our context, equivalence to zero means equality to zero except for irrelevant deviations.
 
-It has been shown that $\widehat{d_S}$ follows an asymptotically normal distribution $\widehat{d_S} \sim N(d_S, \sigma_{d_S}/\sqrt{n})$. However for poor levels of enrichment, it is preferable to use an approximate distribution such as that achieved with the bootstrap methodology. For example, using low mutual enrichment $n_{11}$. Figure 1 help to see the adjustment of Normal (pink line) and Bootstrap approximation(sky blue line) to the true distribution of Sorensen dissimilarity (black line) in a particular case of low enrichment.
+It has been shown that $\widehat{d_S}$ follows an asymptotically normal distribution $\widehat{d_S} \sim N(d_S, \sigma_{d_S}/\sqrt{n})$. However for poor levels of enrichment, it is preferable to use an approximate distribution such as that achieved with the bootstrap methodology. For example, using low mutual enrichment $n_{11}$. Next figure help to see the adjustment of Normal (pink line) and Bootstrap approximation(sky blue line) to the true distribution of Sorensen dissimilarity (black line) in a particular case of low enrichment.
 
 
-![Figure 1: Adjustment of Normal and Bootstrap approximation to the true distribution of Sorensen dissimilarity](boot.png){width=50%}
+<img src="https://github.com/pablof1988/goSorensenApp/raw/master/info/boot.png" width=300> 
 
 In this test, when $p-val$ obtained from normal or bootstrap distribution (depends of the best adjustment) is less that a given significance level $\alpha$, we reject $H_0$ and conclude that there is evidence to conclude that Sorensen dissimilarity is equivalent to zero ($d_S(p) < d_0$), it means biological similarity between feature lists.
 
