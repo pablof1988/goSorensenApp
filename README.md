@@ -1,6 +1,6 @@
 
 <div style="text-align: center">
-![](https://github.com/pablof1988/goSorensenApp/blob/master/info/goSorensen.png?raw=true){width=15%}
+![](goSorensen.png){width=15%}
 </div>
 
 The goal of this app is to provide a simple calculation tool to implement the equivalence test between lists of features introduced in Flores, P., Salicrú, M., Sánchez-Pla, A. and Ocaña, J.(2022) "*An equivalence test between features lists, based on the Sorensen - Dice index and the joint frequencies of GO term enrichment*", BMC Bioinformatics, 2022 23:207.(See full article in <https://rdcu.be/cOISz>). Actually, this is a condensed and user friendly version of the R package published in Bioconductor "goSorensen". More complex calculations can be performed directly using the functions in this package (See more details in <https://bioconductor.org/packages/release/bioc/html/goSorensen.html>).
