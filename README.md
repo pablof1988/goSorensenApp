@@ -43,6 +43,51 @@ It has been shown that $\widehat{d_S}$ follows an asymptotically normal distribu
 In this test, when $p-val$ obtained from normal or bootstrap distribution (depends of the best adjustment) is less that a given significance level $\alpha$, we reject $H_0$ and conclude that there is evidence to conclude that Sorensen dissimilarity is equivalent to zero ($d_S(p) < d_0$), it means biological similarity between feature lists.
 
 ## Using this app
+
+### Installation
+Source code of this Shiny App can be accessed via <https://github.com/pablof1988/goSorensenApp>. It can be used locally or integrated into any Shiny application server.
+
+- R packages that need to be installed
+  - `{BiocManager}` Together with `options(repos = BiocManager::repositories())` because packages from Bioconductor (different to CRAN) are necessary
+  - `{shiny}`
+  - `{shinydashboard}`
+  - `{knitr}`
+  - `{markdown}`
+  - `{rmarkdown}`
+  - `{goSorensen}`
+  - `{ggplot2}`
+  - In addition, some own R-functions to built the graphs of normal and botstrap adjustment are necessaries. These functions are in the `info` folder, in the `simfuncsPar.R` script and must be executed using `source("info/simfuncsPar.R")`
+  
+- Annotation data with Genome wide annotation for different species
+  - `{org.Ag.eg.db}`
+  - `{org.At.tair.db}`
+  - `{org.Bt.eg.db}`
+  - `{org.Ce.eg.db}`
+  - `{org.Cf.eg.db}`
+  - `{org.Dm.eg.db}`
+  - `{org.Dr.eg.db}`
+  - `{org.EcK12.eg.db}`
+  - `{org.EcSakai.eg.db}`
+  - `{org.Gg.eg.db}`
+  - `{org.Hs.eg.db}`
+  - `{org.Mm.eg.db}`
+  - `{org.Mmu.eg.db}`
+  - `{org.Mxanthus.db}` 
+  - `{org.Pt.eg.db}`
+  - `{shinydashboard}`
+  - `{org.Rn.eg.db}`
+  - `{org.Sc.sgd.db}`
+  - `{org.Ss.eg.db}`
+  - `{org.Xl.eg.db}`
+
+This dependencies has to be installed with a R working version `R >=4.2.0`
+
+## User manual
+
+Below are some screen views of the app 
+
+![](info/screen.png){}
+
 To the left, in the black side bar of the app, under the description of "How use this app", there are two important options of analysis: __Use example data__ and  __Enter your data__. The computes that can be carried out in each tab are some intuitive when reading its name and are detailed below:
 
 ### Use example data
